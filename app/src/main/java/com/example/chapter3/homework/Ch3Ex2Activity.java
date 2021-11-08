@@ -143,6 +143,10 @@ public class Ch3Ex2Activity extends AppCompatActivity {
         animator2.setRepeatCount(ObjectAnimator.INFINITE);
         animator2.setRepeatMode(ObjectAnimator.REVERSE);
 
+        ObjectAnimator animator4 = ObjectAnimator.ofFloat(target,"scaleY",1f,2f).setDuration(3000);
+        animator4.setRepeatCount(ObjectAnimator.INFINITE);
+        animator4.setRepeatMode(ObjectAnimator.REVERSE);
+
         // TODO ex2-2：在这里实现另一个 ObjectAnimator，对 target 控件的透明度进行修改，从 1 到 0.5f 循环
         ObjectAnimator animator3 = ObjectAnimator.ofFloat(target,"alpha",1f,0.5f).setDuration(3000);
         animator3.setRepeatCount(ObjectAnimator.INFINITE);
@@ -150,7 +154,7 @@ public class Ch3Ex2Activity extends AppCompatActivity {
 
         // TODO ex2-3: 将上面创建的其他 ObjectAnimator 都添加到 AnimatorSet 中
         animatorSet = new AnimatorSet();
-        animatorSet.playTogether(animator1,animator2,animator3);
+        animatorSet.playTogether(animator1,animator2,animator3,animator4);
         animatorSet.start();
     }
 }

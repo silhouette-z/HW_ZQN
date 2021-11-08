@@ -46,7 +46,7 @@ public class Ch3Ex1Activity extends AppCompatActivity {
                 // 或者到官网查询 https://developer.android.google.cn/reference/android/widget/SeekBar.OnSeekBarChangeListener.html#onProgressChanged(android.widget.SeekBar,%20int,%20boolean
                 if(fromUser){
                     animationView.setProgress(progress/100.0f);
-                    animationView.resumeAnimation();
+//                    animationView.resumeAnimation();
                 }
             }
 
